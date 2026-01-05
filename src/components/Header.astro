@@ -1,0 +1,568 @@
+<nav class="top-0 z-20 absolute w-full start-0">
+  <div
+    class="flex flex-wrap justify-between items-center mx-auto p-4 max-w-7xl"
+  >
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="/images/logo.svg" class="h-16" alt="Logo" />
+    </a>
+
+    <button
+      class="lg:hidden inline-flex box-border justify-center items-center bg-sky-600 shadow-xs px-4 py-2.5 border border-transparent rounded-base focus:outline-none focus:ring-4 focus:ring-brand-medium font-medium text-white text-sm leading-5"
+      type="button"
+      data-drawer-target="drawer-example"
+      data-drawer-show="drawer-example"
+      aria-controls="drawer-example"
+    >
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="none"
+        viewBox="0 0 24 24"
+        ><path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-width="2"
+          d="M5 7h14M5 12h14M5 17h14"></path></svg
+      >
+    </button>
+
+    <div
+      class="hidden md:block w-full md:w-auto"
+      id="navbar-multi-level-dropdown"
+    >
+      <ul
+        class="flex md:flex-row flex-col rtl:space-x-reverse md:space-x-8 mt-4 md:mt-0 p-4 md:p-0 rounded-base font-medium"
+      >
+        <li>
+          <a
+            href="/"
+            class="block bg-sky-600 md:bg-transparent md:p-0 px-3 py-2 rounded text-white md:text-fg-brand"
+            aria-current="page">INICIO</a
+          >
+        </li>
+        <li>
+          <button
+            id="multiLevelDropdownButton"
+            data-dropdown-toggle="multi-dropdown"
+            class="flex justify-between items-center md:hover:bg-transparent hover:bg-neutral-tertiary md:p-0 px-3 py-2 md:border-0 rounded w-full md:w-auto font-medium text-heading md:hover:text-fg-brand"
+          >
+            SERVICIOS
+            <svg
+              class="ms-1.5 w-4 h-4"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              ><path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 9-7 7-7-7"></path></svg
+            >
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            id="multi-dropdown"
+            class="hidden z-10 bg-neutral-primary-medium shadow-lg border border-default-medium rounded-base w-44"
+          >
+            <ul
+              class="p-2 font-medium text-body text-sm"
+              aria-labelledby="multiLevelDropdownButton"
+            >
+              <li>
+                <a
+                  href="/servicios/kinesiologia-maxilofacial"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Kinesiología Maxilofacial</a
+                >
+              </li>
+              <li>
+                <button
+                  id="doubleDropdownButton"
+                  data-dropdown-toggle="doubleDropdown"
+                  data-dropdown-placement="right-start"
+                  type="button"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading text-left"
+                >
+                  Medicina Integrativa
+                  <svg
+                    class="ms-auto w-4 h-4 rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    ><path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m9 5 7 7-7 7"></path></svg
+                  >
+                </button>
+                <div
+                  id="doubleDropdown"
+                  class="hidden z-10 bg-neutral-primary-medium shadow-lg border border-default-medium rounded-base w-44"
+                >
+                  <ul
+                    class="p-2 font-medium text-body text-sm"
+                    aria-labelledby="dropdownMultiLevelButton"
+                  >
+                    <li>
+                      <a
+                        href="/servicios/medicina-integrativa/biomagnetismo"
+                        class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                        >Biomagnetismo</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/servicios/medicina-integrativa/reflexologia-podal"
+                        class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                        >Reflexología Podal</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="/servicios/fonoaudiologia"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Fonoaudiología</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/servicios/terapia-ocupacional"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Terapia Ocupacional</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/servicios/osteopatia"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Osteopatía</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/servicios/yoga-postural"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Yoga Postural</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/servicios/masaje-fisioterapeutico"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Masaje Fisioterapéutico</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/servicios/rehabilitacion-vestibular"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Rehabilitación Vestibular</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/servicios/estetica-corporal"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Estética Corporal</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button
+            id="multiLevelDropdownButton"
+            data-dropdown-toggle="multi-dropdown2"
+            class="flex justify-between items-center md:hover:bg-transparent hover:bg-neutral-tertiary md:p-0 px-3 py-2 md:border-0 rounded w-full md:w-auto font-medium text-heading md:hover:text-fg-brand"
+          >
+            NOSOTROS
+            <svg
+              class="ms-1.5 w-4 h-4"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              ><path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 9-7 7-7-7"></path></svg
+            >
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            id="multi-dropdown2"
+            class="hidden z-10 bg-neutral-primary-medium shadow-lg border border-default-medium rounded-base w-44"
+          >
+            <ul
+              class="p-2 font-medium text-body text-sm"
+              aria-labelledby="multiLevelDropdownButton"
+            >
+              <li>
+                <a
+                  href="/nosotros/mision-vision"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Misión y Visión</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/nosotros/nuestro-equipo"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Nuestro Equipo</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/nosotros/convenios"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Convenios</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/nosotros/educacion-continua"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Educación Continua</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/nosotros/politicas-atencion-paciente"
+                  class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading"
+                  >Políticas de atención al paciente</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a
+            href="https://0f9645a0110ca7a37c233d5052b50d73f95e5b7c.agenda.softwaredentalink.com/agenda?modalidad=1"
+            class="bg-sky-600 px-4 py-2.5 rounded-base focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-white text-sm text-center leading-5"
+            >RESERVA DE HORAS</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- drawer component -->
+<div
+  id="drawer-example"
+  class="top-0 left-0 z-40 fixed bg-neutral-primary-soft p-4 border-default border-e w-96 h-screen overflow-y-auto transition-transform -translate-x-full"
+  tabindex="-1"
+  aria-labelledby="drawer-label"
+>
+  <div class="flex items-center mb-5 pb-4 border-default border-b">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="/images/logo.svg" class="h-16" alt="Logo" />
+    </a>
+    <button
+      type="button"
+      data-drawer-hide="drawer-example"
+      aria-controls="drawer-example"
+      class="top-2.5 absolute flex justify-center items-center bg-transparent hover:bg-neutral-tertiary rounded-base w-16 h-16 text-body hover:text-heading end-2.5"
+    >
+      <svg
+        class="w-5 h-5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="none"
+        viewBox="0 0 24 24"
+        ><path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18 17.94 6M18 18 6.06 6"></path></svg
+      >
+      <span class="sr-only">Close menu</span>
+    </button>
+  </div>
+
+  <nav>
+    <div class="py-5 overflow-y-auto">
+      <ul class="space-y-2 font-medium">
+        <li>
+          <a
+            href="/"
+            class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 rounded-base text-body hover:text-fg-brand"
+          >
+            <svg
+              class="w-5 h-5 group-hover:text-fg-brand transition duration-75 shrink-0"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"
+              ></path>
+            </svg>
+            <span class="ms-3">Inicio</span>
+          </a>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="group flex justify-between items-center hover:bg-neutral-tertiary px-2 py-1.5 rounded-base w-full text-body hover:text-fg-brand"
+            aria-controls="dropdown-example"
+            data-collapse-toggle="dropdown-example"
+          >
+            <svg
+              class="w-5 h-5 group-hover:text-fg-brand transition duration-75 shrink-0"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              ><path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
+              ></path></svg
+            >
+            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+              >Servicios</span
+            >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              ><path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 9-7 7-7-7"></path></svg
+            >
+          </button>
+          <ul
+            id="dropdown-example"
+            class="hidden space-y-2 bg-sky-50 py-2 rounded-base"
+          >
+            <li>
+              <a
+                href="/servicios/kinesiologia-maxilofacial"
+                class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base text-body hover:text-fg-brand"
+                >Kinesiología Maxilofacial</a
+              >
+            </li>
+            <li>
+              <button
+                type="button"
+                class="group flex justify-between items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base w-full text-body hover:text-fg-brand"
+                aria-controls="dropdown-example2"
+                data-collapse-toggle="dropdown-example2"
+              >
+                <span class="flex-1 text-left rtl:text-right whitespace-nowrap"
+                  >Medicina Integrativa</span
+                >
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  ><path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 9-7 7-7-7"></path></svg
+                >
+              </button>
+              <ul
+                id="dropdown-example2"
+                class="hidden space-y-2 bg-sky-100 py-2"
+              >
+                <li>
+                  <a
+                    href="/servicios/medicina-integrativa/biomagnetismo"
+                    class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-15 rounded-base text-body hover:text-fg-brand"
+                    >Biomagnetismo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/servicios/medicina-integrativa/reflexologia-podal"
+                    class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-15 rounded-base text-body hover:text-fg-brand"
+                    >Reflexología Podal</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="/servicios/fonoaudiologia"
+                class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base text-body hover:text-fg-brand"
+                >Fonoaudiología</a
+              >
+            </li>
+            <li>
+              <a
+                href="/servicios/terapia-ocupacional"
+                class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base text-body hover:text-fg-brand"
+                >Terapia Ocupacional</a
+              >
+            </li>
+            <li>
+              <a
+                href="/servicios/osteopatia"
+                class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base text-body hover:text-fg-brand"
+                >Osteopatía</a
+              >
+            </li>
+            <li>
+              <a
+                href="/servicios/yoga-postural"
+                class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base text-body hover:text-fg-brand"
+                >Yoga Postural</a
+              >
+            </li>
+            <li>
+              <a
+                href="/servicios/masaje-fisioterapeutico"
+                class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base text-body hover:text-fg-brand"
+                >Masaje Fisioterapéutico</a
+              >
+            </li>
+            <li>
+              <a
+                href="/servicios/rehabilitacion-vestibular"
+                class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base text-body hover:text-fg-brand"
+                >Rehabilitación Vestibular</a
+              >
+            </li>
+            <li>
+              <a
+                href="/servicios/estetica-corporal"
+                class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base text-body hover:text-fg-brand"
+                >Estética Corporal</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="group flex justify-between items-center hover:bg-neutral-tertiary px-2 py-1.5 rounded-base w-full text-body hover:text-fg-brand"
+            aria-controls="dropdown-example3"
+            data-collapse-toggle="dropdown-example3"
+          >
+            <svg
+              class="w-5 h-5 group-hover:text-fg-brand transition duration-75 shrink-0"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"
+              ></path>
+            </svg>
+
+            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+              >Nosotros</span
+            >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              ><path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 9-7 7-7-7"></path></svg
+            >
+          </button>
+          <ul
+            id="dropdown-example3"
+            class="hidden space-y-2 bg-sky-50 py-2 rounded-base"
+          >
+            <li>
+              <a
+                href="/servicios/mision-vision"
+                class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base text-body hover:text-fg-brand"
+                >Misión y Visión</a
+              >
+            </li>
+            <li>
+              <a
+                href="/servicios/nuestro-equipo"
+                class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base text-body hover:text-fg-brand"
+                >Nuestro Equipo</a
+              >
+            </li>
+            <li>
+              <a
+                href="/servicios/convenios"
+                class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base text-body hover:text-fg-brand"
+                >Convenios</a
+              >
+            </li>
+            <li>
+              <a
+                href="/servicios/politicas-atencion-paciente"
+                class="group flex items-center hover:bg-neutral-tertiary px-2 py-1.5 pl-10 rounded-base text-body hover:text-fg-brand"
+                >Políticas de atención al paciente</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <button
+      type="button"
+      class="bg-linear-to-r hover:bg-linear-to-bl from-cyan-500 to-blue-500 py-5 rounded-base focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800 w-full font-medium text-white text-lg text-center leading-5"
+      >Reserva de Horas</button
+    >
+  </nav>
+</div>

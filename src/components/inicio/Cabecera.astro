@@ -1,0 +1,184 @@
+<section class="hero">
+  <div class="mt-20 container">
+    <!-- Text -->
+    <div class="hero-text">
+      <span class="text-sky-600 eyebrow">BIENVENIDO A NUESTRA CLÍNICA</span>
+      <h1>Centrados en el Cuidado Integral del Paciente</h1>
+      <p>
+        Clínica Integral Relevium es el único Centro de Rehabilitación
+        Maxilofacial que existe en Chile.
+      </p>
+
+      <div class="buttons">
+        <a
+          href="https://0f9645a0110ca7a37c233d5052b50d73f95e5b7c.agenda.softwaremedilink.com/agenda?modalidad=1"
+          target="_blank"
+          class="bg-sky-600 btn primary">RESERVA DE HORAS</a
+        >
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="hero-image">
+      <div class="ring">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill="#B8E2FF"
+            d="M61.1,-21.1C67.2,-0.8,52.2,25.1,29.6,41.7C7.1,58.3,-22.9,65.5,-42.8,52.6C-62.7,39.6,-72.6,6.4,-63.7,-17.5C-54.9,-41.4,-27.5,-55.9,0,-55.9C27.4,-55.9,54.9,-41.3,61.1,-21.1Z"
+            transform="translate(100 100)"></path>
+        </svg>
+      </div>
+      <div class="image-circle">
+        <img src="/images/doctor.webp" alt="Doctor" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+    color: #0f172a;
+  }
+
+  .container {
+    min-height: 40rem;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 40rem;
+    overflow: hidden;
+  }
+
+  /* CONTAINER */
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: auto;
+    padding: 4rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  /* TEXT */
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 1rem 0;
+  }
+
+  .hero-text p {
+    max-width: 420px;
+    color: #475569;
+    margin-bottom: 2rem;
+  }
+
+  /* BUTTONS */
+  .buttons {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .btn {
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .btn.primary {
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+  }
+
+  .btn.link {
+    color: #4f6bdc;
+  }
+
+  /* IMAGE */
+  .hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-circle {
+    width: 23rem;
+    height: 25rem;
+    border-radius: 70% 50% 70% 50%;
+    overflow: hidden;
+    background: white;
+  }
+
+  .image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* RING */
+  .ring {
+    position: absolute;
+    top: -10rem;
+    width: 45rem;
+    height: 45rem;
+    z-index: -1;
+    box-shadow: none;
+  }
+
+  /* ===================== RESPONSIVE ===================== */
+
+  /* TABLET */
+  @media (max-width: 900px) {
+    .container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .hero-text p {
+      margin: 0 auto 2rem;
+    }
+
+    .buttons {
+      justify-content: center;
+    }
+  }
+
+  /* MOBILE */
+  @media (max-width: 500px) {
+    .hero-text h1 {
+      font-size: 2.2rem;
+    }
+
+    .image-circle {
+      width: 260px;
+      height: 260px;
+    }
+
+    .ring {
+      width: 300px;
+      height: 300px;
+    }
+  }
+</style>

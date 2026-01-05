@@ -1,0 +1,43 @@
+---
+import CardDatos from "@components/extras/CardDatos.astro";
+
+const datos = [
+  {
+    image:
+      '<svg class="w-12 h-12 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 7 2 2 4-4m-5-9v4h4V3h-4Z"/></svg>',
+    title: "Reserva de horas",
+    message:
+      "Cuida tu cuerpo. Reserva tu hora con un profesional especializado.",
+    otro: "",
+    button: "Resevar",
+    url: "https://0f9645a0110ca7a37c233d5052b50d73f95e5b7c.agenda.softwaremedilink.com/agenda?modalidad=1",
+  },
+  {
+    image:
+      '<svg class="w-12 h-12 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 10.5h.01m-4.01 0h.01M8 10.5h.01M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-6.6a1 1 0 0 0-.69.275l-2.866 2.723A.5.5 0 0 1 8 18.635V17a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>',
+    title: "Contacto",
+    message: "Estamos aquí para ayudarte. Contáctanos.",
+    otro: "+569 88264779 - clinica@relevium.cl",
+    button: "Contacto",
+    url: "/contacto",
+  },
+  {
+    image:
+      '<svg class="w-12 h-12 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/></svg>',
+    title: "Nuestros Doctores",
+    message: "Conoce a nuestro equipo de doctores especializados.",
+    button: "Doctores",
+    url: "/nosotros/nuestro-equipo",
+  },
+];
+---
+
+<div
+  class="gap-4 grid grid-cols-1 lg:grid-cols-3 mx-auto lg:mb-20 p-5 lg:p-0 max-w-5xl"
+>
+  {
+    datos.map((data) => {
+      return <CardDatos data={data} />;
+    })
+  }
+</div>

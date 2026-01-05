@@ -1,11 +1,43 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Datos from "@components/inicio/Datos.astro";
+import Nosotros from "@components/inicio/Nosotros.astro";
+import Docs from "@components/inicio/Docs.astro";
+import Contacto from "@components/inicio/Contacto.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Clinica Integral Relevium &#8211; Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
 ---
 
-<Layout>
-	<Welcome />
+<Layout dataPag={seo}>
+  <Cabecera />
+  <Container>
+    <div id="contenido" class="relative">
+      <Datos />
+      <Nosotros />
+      <Docs />
+    </div>
+  </Container>
+  <Contacto />
 </Layout>
+
+<style>
+  #contenido {
+    z-index: 1;
+  }
+</style>

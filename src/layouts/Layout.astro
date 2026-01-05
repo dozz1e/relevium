@@ -1,22 +1,107 @@
+---
+import "../styles/global.css";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import { SEO } from "astro-seo";
+
+const { dataPag } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es" data-theme="corpoate">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Clinica Integral Relevium » Feed"
+      href="https://clinicarelevium.cl/feed/"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Clinica Integral Relevium » Feed de comentarios"
+      href="https://clinicarelevium.cl/comments/feed/"
+    />
+    <link
+      rel="alternate"
+      title="oEmbed (JSON)"
+      type="application/json+oembed"
+      href="https://clinicarelevium.cl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fclinicarelevium.cl%2F"
+    />
+    <link
+      rel="alternate"
+      title="oEmbed (XML)"
+      type="text/xml+oembed"
+      href="https://clinicarelevium.cl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fclinicarelevium.cl%2F&format=xml"
+    />
+    <SEO
+      title={dataPag.title}
+      description={dataPag.description}
+      openGraph={{
+        basic: {
+          title: dataPag.title,
+          type: "website",
+          image: dataPag.image,
+        },
+      }}
+    />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="icon"
+      href="https://clinicarelevium.cl/wp-content/uploads/2021/03/Original.png"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://clinicarelevium.cl/wp-content/uploads/2021/03/Original.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="hidden lg:block blob blob-ligh">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill="#EBFAFF"
+          d="M44.8,-76.9C56.9,-70.6,64.9,-56.3,72.5,-42.2C80.1,-28,87.5,-14,88.6,0.7C89.8,15.3,84.7,30.7,75.7,42.4C66.6,54,53.5,62.1,40.3,68.4C27,74.7,13.5,79.2,-0.9,80.8C-15.3,82.3,-30.6,81,-43.7,74.5C-56.7,68.1,-67.4,56.6,-72.6,43.3C-77.9,30.1,-77.6,15,-78,-0.3C-78.5,-15.6,-79.7,-31.1,-74.7,-44.9C-69.8,-58.6,-58.7,-70.5,-45.2,-76C-31.7,-81.5,-15.8,-80.7,0.2,-81.1C16.3,-81.5,32.7,-83.2,44.8,-76.9Z"
+          transform="translate(100 100)"></path>
+      </svg>
+    </div>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  /* BLOBS */
+  .blob {
+    position: absolute;
+    z-index: 0;
+  }
+
+  .blob-light {
+    top: -35rem;
+    svg {
+      height: 95rem;
+      width: 120rem;
+    }
+  }
 </style>
