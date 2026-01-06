@@ -1,1 +1,42 @@
-<h1>Estetica Corporal</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import DatosServicios from "@components/servicios/DatosServicios.astro";
+import Horarios from "@components/extras/Horarios.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Estética Corporal - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/servicios/estetica-corporal",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Cabecera
+    image="/images/estetica-corporal.webp"
+    title="Estética Corporal"
+    texto="La Estética Corporal es una disciplina dentro del ámbito de la salud y el bienestar que se enfoca en la evaluación, diagnóstico y aplicación de tratamientos para mejorar la apariencia y funcionalidad del cuerpo."
+  />
+  <Horarios duracion="" particular="" isapre="" fonasa="" pack="" />
+  <Container>
+    <div id="contenido" class="relative">
+      <DatosServicios
+        texto="Su objetivo es promover el cuidado de la piel, la tonificación muscular y la reducción de adiposidad localizada mediante técnicas avanzadas. Los profesionales especializados en este campo utilizan equipos de última generación, como máquinas de radiofrecuencia, que estimulan la producción de colágeno y elastina para mejorar la firmeza de la piel, y ondas rusas, que favorecen la tonificación muscular y la activación circulatoria. A lo largo del proceso, se diseña un plan de tratamiento personalizado que considera las necesidades individuales de cada paciente, contribuyendo a su bienestar estético y funcional."
+        image="/images/estetica-corporal2.webp"
+      />
+    </div>
+  </Container>
+  <Contacto />
+</Layout>

@@ -1,0 +1,24 @@
+---
+const { duracion, particular, isapre, fonasa, pack } = Astro.props;
+---
+
+{
+  duracion && (
+    <div class="bg-sky-50 mb-10 px-10 lg:px-0 py-10">
+      <div class="mx-auto max-w-7xl text-center">
+        <p>
+          <strong class="pr-1">Duración de la sesión:</strong>
+          {duracion} | <strong class="pr-1">Valor particular:</strong>
+          {particular} | <strong class="pr-1">Valor Isapre:</strong>
+          {isapre} | <strong class="pr-1">Valor Fonasa:</strong>
+          {fonasa} | <strong class="pr-1">Valor pack de 10 sesiones:</strong>
+          {pack}
+        </p>
+        <p>
+          *Atención pacientes Fonasa sin sistema de bono y con certificado de
+          afiliación
+        </p>
+      </div>
+    </div>
+  )
+}

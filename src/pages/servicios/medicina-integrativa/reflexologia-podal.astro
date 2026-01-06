@@ -1,1 +1,48 @@
-<h1>Reflexología Podal</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import DatosServicios from "@components/servicios/DatosServicios.astro";
+import Horarios from "@components/extras/Horarios.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Reflexología Podal - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/servicios/medicina-integrativa/reflexologia-podal",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Cabecera
+    image="/images/podal.webp"
+    title="Reflexología Podal"
+    texto="La Reflexología Podal es una de las terapias complementarias que ofrecemos en nuestra clínica para el manejo del dolor. Esta técnica se basa en la estimulación de puntos específicos en los pies, que corresponden a diferentes órganos y sistemas del cuerpo."
+  />
+  <Horarios
+    duracion="45 – 60 min"
+    particular="$57.000"
+    isapre="$43.890"
+    fonasa="$42.750"
+    pack="$399.000"
+  />
+  <Container>
+    <div id="contenido" class="relative">
+      <DatosServicios
+        texto="Mediante la aplicación de presión en estas áreas, la reflexología podal facilita la reducción del estrés, mejora la circulación y promueve el equilibrio natural del cuerpo. Esta terapia es especialmente efectiva para aliviar tipos de dolor como el de cabeza, espalda y tensiones musculares. Al integrar la reflexología podal en nuestro enfoque de tratamiento, buscamos no solo aliviar el dolor de manera temporal, sino también fomentar una recuperación más profunda y duradera, mejorando así el bienestar general de nuestros pacientes."
+        image="/images/podal2.webp"
+      />
+    </div>
+  </Container>
+  <Contacto />
+</Layout>

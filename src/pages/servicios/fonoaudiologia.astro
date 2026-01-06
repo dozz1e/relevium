@@ -1,1 +1,48 @@
-<h1>Fonoaudiología</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import DatosServicios from "@components/servicios/DatosServicios.astro";
+import Horarios from "@components/extras/Horarios.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Fonoaudiología - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/servicios/fonoaudiologia",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Cabecera
+    image="/images/fonoaudiologia.webp"
+    title="Fonoaudiología"
+    texto="La Fonoaudiología es una disciplina que, dentro del área de salud, se encarga de la evaluación, diagnóstico, rehabilitación, promoción de la salud y prevención de los trastornos del lenguaje, habla, deglución, audición, voz y comunicación."
+  />
+  <Horarios
+    duracion="45 – 60 min"
+    particular="$50.000"
+    isapre="$38.500"
+    fonasa="$37.500"
+    pack="$350.000"
+  />
+  <Container>
+    <div id="contenido" class="relative">
+      <DatosServicios
+        texto="Profesional de la salud de este campo está capacitado para el abordaje y estudio integral de la comunicación humana (audición, lenguaje, habla y voz), alimentación oral/deglución, motricidad orofacial y sistema vestibular a lo largo del curso de vida de las personas."
+        image="/images/fonoaudiologia2.webp"
+      />
+    </div>
+  </Container>
+  <Contacto />
+</Layout>

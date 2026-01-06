@@ -1,1 +1,48 @@
-<h1>Kinesiología Maxilofacial</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import DatosServicios from "@components/servicios/DatosServicios.astro";
+import Horarios from "@components/extras/Horarios.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Kinesiología Maxilofacial - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/servicios/kinesiologia-maxilofacial",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Cabecera
+    image="/images/maxilo.webp"
+    title="Kinesiología Maxilofacial"
+    texto="La kinesiología maxilofacial es una sub-especialidad de la kinesiología orientada a prevenir y/o rehabilitar trastornos temporomandibulares, dolor facial, cervical y craneal. La cabeza, cuello y mandíbula forman un sistema, en el cual la alteración de alguno de estos, provoca una descompensación general, provocando alteraciones articulares, contracturas musculares , inestabilidades articulares y dolor."
+  />
+  <Horarios
+    duracion="30 – 45 min"
+    particular="$55.000"
+    isapre="$42.350"
+    fonasa="$41.250"
+    pack="$385.000"
+  />
+  <Container>
+    <div id="contenido" class="relative">
+      <DatosServicios
+        texto="Algunas de las alteraciones mandibulares consisten en cansancio muscular en cara y cuello, donde los afectados presentan rigidez muscular que limita el movimiento al abrir y cerrar la boca o mover la cabeza de un lado a otro; artrosis mandibular o de ATM, que es una patología degenerativa articular que produce desgaste, alteración en movilidad y dolor. La mayoría de las artrosis se asocian a ruidos al abrir y/o cerrar la boca; cefaleas y cervicalgias,  caracterizadas por dolor de cabeza, cuello y/o cráneo. Debido a los nervios ubicados desde el cuello a la cabeza, hay cefaleas donde el dolor es más intenso detrás de uno o ambos ojos  y/o alrededor; interposición lingual, que es una alteración en la posición lingual al deglutir, hablar o en reposo. Esto puede producir desorden dentario y malformaciones durante el desarrollo; post operatorio de cirugías maxilofaciales, donde el tratamiento kinésico debe ser temprano para poder desinflamar el tejido y entrenar la musculatura para una nueva normalidad. Este tratamiento en el post operatorio de una cirugía contribuye a la recuperación de la sensibilidad, acelerar la desinflamación y a recuperar el sistema de una forma óptima a través entrenamiento muscular, movilización de la articulación, liberación de nervio trigémino."
+        image="/images/maxilo2.webp"
+      />
+    </div>
+  </Container>
+  <Contacto />
+</Layout>

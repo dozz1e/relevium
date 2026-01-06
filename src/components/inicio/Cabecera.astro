@@ -1,12 +1,15 @@
+---
+const { image, title, texto } = Astro.props;
+---
+
 <section class="hero">
   <div class="mt-20 container">
     <!-- Text -->
     <div class="hero-text">
       <span class="text-sky-600 eyebrow">BIENVENIDO A NUESTRA CLÍNICA</span>
-      <h1>Centrados en el Cuidado Integral del Paciente</h1>
+      <h1>{title}</h1>
       <p>
-        Clínica Integral Relevium es el único Centro de Rehabilitación
-        Maxilofacial que existe en Chile.
+        {texto}
       </p>
 
       <div class="buttons">
@@ -29,7 +32,7 @@
         </svg>
       </div>
       <div class="image-circle">
-        <img src="/images/doctor.webp" alt="Doctor" />
+        <img src={image} alt="Doctor" />
       </div>
     </div>
   </div>

@@ -1,1 +1,48 @@
-<h1>Yoga Postural</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import DatosServicios from "@components/servicios/DatosServicios.astro";
+import Horarios from "@components/extras/Horarios.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Yoga Postural - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/servicios/yoga-postural",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Cabecera
+    image="/images/yoga.webp"
+    title="Yoga Postural"
+    texto="En nuestra clínica, incorporamos la Yoga Postural como una herramienta terapéutica clave dentro de nuestros tratamientos para el dolor."
+  />
+  <Horarios
+    duracion="45 – 60 min"
+    particular="$50.000"
+    isapre="$38.500"
+    fonasa="$37.500"
+    pack="$350.000"
+  />
+  <Container>
+    <div id="contenido" class="relative">
+      <DatosServicios
+        texto="Esta práctica se centra en mejorar la postura y el alineamiento corporal a través de posturas y movimientos de yoga específicos que fortalecen y flexibilizan el cuerpo. La Yoga Postural es especialmente beneficiosa para pacientes que sufren de dolor crónico, como el dolor lumbar o las tensiones en el cuello y hombros, ya que las técnicas empleadas ayudan a corregir desequilibrios musculares y a promover una mejor mecánica corporal. Este enfoque no solo alivia el dolor, sino que también contribuye a prevenir futuras lesiones y a mejorar la calidad de vida general del paciente, ofreciendo una solución holística y efectiva para la gestión del dolor."
+        image="/images/yoga2.webp"
+      />
+    </div>
+  </Container>
+  <Contacto />
+</Layout>

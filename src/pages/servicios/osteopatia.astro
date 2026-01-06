@@ -1,1 +1,48 @@
-<h1>Osteopatía</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import DatosServicios from "@components/servicios/DatosServicios.astro";
+import Horarios from "@components/extras/Horarios.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Osteopatía - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/servicios/osteopatia",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Cabecera
+    image="/images/osteopatia.webp"
+    title="Osteopatía"
+    texto="Es una forma de disciplina terapéutica o medicina manual, natural; la cual estudia al ser humano en su globalidad."
+  />
+  <Horarios
+    duracion="45 – 60 min"
+    particular="$57.000"
+    isapre="$43.890"
+    fonasa="$41.610"
+    pack="$399.000"
+  />
+  <Container>
+    <div id="contenido" class="relative">
+      <DatosServicios
+        texto="Tiene más de 100 años de desarrollo en Europa y Norteamérica. Se sustenta en ciencias como la anatomía, fisiología, biomecánica, entre otras.En cada sesión se genera un “diálogo” entre terapeuta y los diferentes tejidos del cuerpo (nervioso, muscular, óseo, linfático, visceral) con el objetivo de cotejar el origen de la disfunción.Con ello se aplican técnicas de tratamiento manual destinadas a esti mular los mecanismos de autorregulación inherentes del cuerpo humano."
+        image="/images/osteopatia2.webp"
+      />
+    </div>
+  </Container>
+  <Contacto />
+</Layout>

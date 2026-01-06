@@ -1,1 +1,48 @@
-<h1>Biomagnetismo</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import DatosServicios from "@components/servicios/DatosServicios.astro";
+import Horarios from "@components/extras/Horarios.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Biomagnetismo - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/servicios/medicina-integrativa/biomagnetismo",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Cabecera
+    image="/images/biomagnetismo.webp"
+    title="Biomagnetismo"
+    texto="Biomagnetismo, es un tratamiento que conociste en la aplicación de imanes sobre las zonas del cuerpo humano en las que se padece de dolor o algun tipo de patología."
+  />
+  <Horarios
+    duracion="30 min"
+    particular="$45.000"
+    isapre="$34.650"
+    fonasa="$33.750"
+    pack="$315.000"
+  />
+  <Container>
+    <div id="contenido" class="relative">
+      <DatosServicios
+        texto="Está técnica se basa en el par biomagnetico, es decir, en un imán negativo y otro positivo que interactuan entre ellos corrigiendo el PH del organismo para así prevenir y eliminar los efectos negativos de múltiples enfermedades."
+        image="/images/podal2.webp"
+      />
+    </div>
+  </Container>
+  <Contacto />
+</Layout>

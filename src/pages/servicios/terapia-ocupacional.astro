@@ -1,1 +1,48 @@
-<h1>Terapia Ocupacional</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import DatosServicios from "@components/servicios/DatosServicios.astro";
+import Horarios from "@components/extras/Horarios.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Terapia Ocupacional - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/servicios/terapia-ocupacional",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Cabecera
+    image="/images/higiene-del-sueno.webp"
+    title="Terapia Ocupacional"
+    texto="Realiza una evaluación personalizada de cada paciente que implica considerar factores individuales, como los hábitos de sueño, la rutina diaria, la salud mental, las condiciones médicas subyacentes y otros factores que pueden estar contribuyendo a los problemas de sueño en sus hogares. "
+  />
+  <Horarios
+    duracion="45 – 60 min"
+    particular="$50.000"
+    isapre="$38.500"
+    fonasa="$37.500"
+    pack="$350.000"
+  />
+  <Container>
+    <div id="contenido" class="relative">
+      <DatosServicios
+        texto="El trabajo es en conjunto con los pacientes para identificar las causas subyacentes de sus trastornos del sueño. Esto puede incluir factores emocionales, como el estrés o la ansiedad, así como problemas físicos, como el dolor crónico o las condiciones médicas específicas. Con base en la evaluación se diseñan estrategias de manejo personalizadas. Estas estrategias pueden incluir la creación de una rutina de sueño consistente, la implementación de técnicas de relajación, la modificación de la dieta o el uso de terapia cognitivo-conductual para el insomnio (TCC-I). El sueño y el descanso son parte de las ocupaciones del ser humano y una de las mas importantes, ya que estas nos ayudan a poder mantener la homeostasis ( equilibrio ) en la vida. Un niño necesita de al menos 10 horas de sueño y un adulto 7 – 8 horas, si es menos de este brango, esto puede repercutir a lo largo del tiempo."
+        image="/images/ocupacional.webp"
+      />
+    </div>
+  </Container>
+  <Contacto />
+</Layout>

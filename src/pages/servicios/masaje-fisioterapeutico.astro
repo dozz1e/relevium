@@ -1,1 +1,48 @@
-<h1>Masaje Fisioterapéutico</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import DatosServicios from "@components/servicios/DatosServicios.astro";
+import Horarios from "@components/extras/Horarios.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Masaje Fisioterapéutico - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/servicios/masaje-fisioterapeutico",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Cabecera
+    image="/images/masaje-fisio.webp"
+    title="Masaje Fisioterapéutico"
+    texto="El masaje fisioterapéutico es una técnica fundamental en nuestro enfoque integral para el manejo del dolor. Esta modalidad terapéutica implica la manipulación manual de los tejidos blandos del cuerpo para aliviar el dolor, mejorar la circulación y facilitar la movilidad."
+  />
+  <Horarios
+    duracion="45 – 60 min"
+    particular="$50.000"
+    isapre="$38.500"
+    fonasa="$37.500"
+    pack="$350.000"
+  />
+  <Container>
+    <div id="contenido" class="relative">
+      <DatosServicios
+        texto="Es especialmente efectivo para pacientes que sufren de dolencias como tensión muscular, dolor articular y fatiga. Al incorporar el masaje fisioterapéutico en nuestros planes de tratamiento, buscamos no solo ofrecer un alivio inmediato del dolor, sino también trabajar en la corrección de desequilibrios posturales y tensiones crónicas que pueden ser la raíz de problemas persistentes. Este enfoque ayuda a nuestros pacientes a recuperar una función óptima y a mejorar su calidad de vida de manera significativa."
+        image="/images/masaje-fisio2.webp"
+      />
+    </div>
+  </Container>
+  <Contacto />
+</Layout>

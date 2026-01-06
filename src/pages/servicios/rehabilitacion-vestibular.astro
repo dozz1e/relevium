@@ -1,1 +1,48 @@
-<h1>Rehabilitación Vestibular</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import DatosServicios from "@components/servicios/DatosServicios.astro";
+import Horarios from "@components/extras/Horarios.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Rehabilitación Vestibular - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/servicios/rehabilitacion-vestibular",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Cabecera
+    image="/images/vestibular.webp"
+    title="Rehabilitación Vestibular"
+    texto="La Rehabilitación Vestibular es una disciplina dentro del ámbito de la salud que se enfoca en la evaluación, diagnóstico y tratamiento de trastornos del equilibrio y el sistema vestibular."
+  />
+  <Horarios
+    duracion="45 – 60 min"
+    particular="$50.000"
+    isapre="$38.500"
+    fonasa="$37.500"
+    pack="$350.000"
+  />
+  <Container>
+    <div id="contenido" class="relative">
+      <DatosServicios
+        texto="Su objetivo es mejorar la estabilidad, reducir el vértigo y optimizar la movilidad del paciente a través de ejercicios específicos y técnicas especializadas. Los profesionales en esta área diseñan programas personalizados que incluyen maniobras de reentrenamiento vestibular, estimulación sensorial y estrategias posturales, contribuyendo a la recuperación funcional y a una mejor calidad de vida."
+        image="/images/vestibular2.webp"
+      />
+    </div>
+  </Container>
+  <Contacto />
+</Layout>

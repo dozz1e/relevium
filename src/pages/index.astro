@@ -15,7 +15,7 @@ interface Seo {
 }
 
 const seo: Seo = {
-  title: "Clinica Integral Relevium &#8211; Clinica Integral Relevium",
+  title: "Clinica Integral Relevium &#8211;",
   description:
     "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
   url: "https://clinicarelevium.cl/",
@@ -25,7 +25,12 @@ const seo: Seo = {
 ---
 
 <Layout dataPag={seo}>
-  <Cabecera />
+  <Cabecera
+    image="/images/doctor.webp"
+    title="BIENVENIDO A NUESTRA CLÍNICA"
+    texto="Clínica Integral Relevium es el único Centro de Rehabilitación
+        Maxilofacial que existe en Chile."
+  />
   <Container>
     <div id="contenido" class="relative">
       <Datos />

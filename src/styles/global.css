@@ -15,3 +15,7 @@ main {
 @theme {
   --color-neutral-primary: oklch(58.8% 0.158 241.966);
 }
+
+#contenido {
+  z-index: 1;
+}
