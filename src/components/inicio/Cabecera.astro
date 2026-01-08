@@ -1,5 +1,11 @@
 ---
-const { image, title, texto } = Astro.props;
+const {
+  image,
+  title,
+  texto,
+  url = "https://0f9645a0110ca7a37c233d5052b50d73f95e5b7c.agenda.softwaremedilink.com/agenda?modalidad=1",
+  boton = "RESERVA DE HORAS",
+} = Astro.props;
 ---
 
 <section class="hero">
@@ -13,11 +19,7 @@ const { image, title, texto } = Astro.props;
       </p>
 
       <div class="buttons">
-        <a
-          href="https://0f9645a0110ca7a37c233d5052b50d73f95e5b7c.agenda.softwaremedilink.com/agenda?modalidad=1"
-          target="_blank"
-          class="bg-sky-600 btn primary">RESERVA DE HORAS</a
-        >
+        <a href={url} target="_blank" class="bg-sky-600 btn primary">{boton}</a>
       </div>
     </div>
 

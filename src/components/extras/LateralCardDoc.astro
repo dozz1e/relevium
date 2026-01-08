@@ -1,0 +1,27 @@
+---
+import { docs } from "@lib/docs";
+---
+
+{
+  docs.map((doc) => (
+    <div class="flex md:flex-row flex-col items-center bg-neutral-primary-soft shadow-xs p-6 border border-default rounded-base">
+      <img
+        class="mb-4 md:mb-0 rounded-base w-full md:w-48 h-64 md:h-auto object-cover"
+        src={doc.image}
+        alt={doc.name}
+      />
+      <div class="flex flex-col justify-between md:p-4 leading-normal">
+        <h5 class="mb-2 font-bold text-heading text-2xl tracking-tight">
+          {doc.name}
+        </h5>
+        <p class="mb-6 text-body">
+          <ul>
+            {doc.data.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </p>
+      </div>
+    </div>
+  ))
+}

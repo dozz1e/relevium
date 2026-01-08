@@ -1,1 +1,39 @@
-<h1>Nuestro Equipo</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import LateralCardDoc from "@components/extras/LateralCardDoc.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Nuestro Equipo - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/nosotros/nuestro-equipo",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Container>
+    <div id="contenido" class="relative">
+      <Cabecera
+        image="/images/nosotros.webp"
+        title="Nuestro Equipo de Profesionales"
+        texto="Especialistas en el tratamiento y manejo del dolor"
+      />
+      <div class="mx-auto lg:mb-20 max-w-7xl">
+        <LateralCardDoc />
+      </div>
+    </div>
+  </Container>
+  <Contacto />
+</Layout>

@@ -1,1 +1,42 @@
-<h1>Educación Continua</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import DatosServicios from "@components/servicios/DatosServicios.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Educación Continua - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/nosotros/educacion-continua",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Cabecera
+    image="/images/educacion-continua.webp"
+    title="Educación Continua"
+    texto="La Escuela de Educación Continua de Scitech Globalclass, en colaboración con Relevium Educación Continua, se complace en anunciar la creación de la “Escuela de Salud y Manejo del Dolor”, un nuevo capítulo en nuestra misión de ofrecer programas educativos de vanguardia."
+    url="https://edu.scitech.cl/course/index.php?categoryid=38"
+    boton="Campus Virtual"
+  />
+  <Container>
+    <div id="contenido" class="relative">
+      <DatosServicios
+        texto="Esta iniciativa surge de la sinergia entre nuestras instituciones, ambas comprometidas con la excelencia académica y la innovación en la educación. Nuestro enfoque interdisciplinario integra los últimos avances en tecnología, salud y ciencias del bienestar, con el fin de proporcionar a los profesionales del sector salud herramientas efectivas y conocimientos actualizados para el manejo integral del dolor, por medio del perfecto equilibrio con nuestras modalidades Semipresenciales: Online Asincrónico en nuestro Campus Virtual, Masterclass Online Sincrónicas y Prácticas presenciales  con nuestros profesionales especializados, que permiten ofrecer ahora estas especializaciones a todo el mercado Latinoamericano.  A través de nuestra “Escuela de Salud y Manejo del Dolor” aspiramos a formar líderes capaces de transformar la práctica clínica y mejorar la calidad de vida de las personas a nivel global."
+        image="/images/educacion.webp"
+      />
+    </div>
+  </Container>
+  <Contacto />
+</Layout>

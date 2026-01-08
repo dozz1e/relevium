@@ -1,1 +1,169 @@
-<h1>Politicas de atención al cliente</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import LateralCardDoc from "@components/extras/LateralCardDoc.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Politicas de atención al cliente - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/nosotros/politicas-atencion-cliente",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Container>
+    <div id="contenido" class="relative">
+      <Cabecera
+        image="/images/nosotros.webp"
+        title="Politicas de atención al cliente"
+        texto="Infórmate activamente de nuestras políticas para que disfrutes de tu atención clínica y evolución"
+      />
+      <div class="mx-auto lg:mb-20 max-w-7xl">
+        <h2 class="mb-5 font-bold text-3xl">Nuestras Políticas</h2>
+        <section class="mb-10">
+          <h3 class="mb-5 font-bold text-xl">
+            I. ANTECEDENTES Y OBJETO DEL DOCUMENTO
+          </h3>
+          <p>
+            El presente documento tiene como finalidad informar al paciente
+            sobre sus derechos y deberes en relación con su atención de salud en
+            Clínica Integral Relevium, en conformidad con la Ley N° 19.496 sobre
+            Protección de los Derechos de los Consumidores y la Ley N° 20.584,
+            que regula los derechos y deberes de las personas en relación con
+            acciones vinculadas a su atención de salud.
+          </p>
+          <br />
+          <p>
+            Mediante la suscripción de este consentimiento, el paciente declara
+            haber sido informado de manera clara, oportuna y comprensible sobre
+            los procedimientos a realizarse, sus beneficios, riesgos,
+            alternativas terapéuticas y condiciones económicas asociadas a la
+            prestación del servicio.
+          </p>
+        </section>
+        <section class="mb-10">
+          <h3 class="mb-5 font-bold text-xl">
+            II. POLÍTICA DE ASISTENCIA Y CANCELACIÓN DE CITAS
+          </h3>
+          <ul>
+            <li>
+              1. El paciente tiene derecho a recibir atención en condiciones de
+              seguridad, dignidad y respeto, de acuerdo con los estándares
+              sanitarios aplicables.
+            </li>
+            <li>
+              2. En caso de no poder asistir a una cita programada, el paciente
+              deberá informar a la Clínica Integral Relevium con una
+              anticipación mínima de 12 horas, a través de WhatsApp o correo
+              electrónico.
+            </li>
+            <li>
+              3. Si el paciente no asiste a la cita sin haber realizado la
+              notificación en el plazo establecido, la cita se considerará como
+              realizada, sin derecho a reembolso ni reprogramación.
+            </li>
+            <li>
+              4. En caso de fuerza mayor o razones médicas comprobables, el
+              paciente podrá solicitar la reprogramación de su cita, sujeta a
+              disponibilidad.
+            </li>
+          </ul>
+        </section>
+        <section class="mb-10">
+          <h3 class="mb-5 font-bold text-xl">
+            III. POLÍTICA DE PAGO Y USO DE LA TERAPIA
+          </h3>
+          <ul>
+            <li>
+              1. Una vez realizado el pago de la terapia, no se efectuará
+              devolución del dinero bajo ninguna circunstancia, en conformidad
+              con la normativa vigente de protección al consumidor.
+            </li>
+            <li>
+              2. No obstante, el paciente podrá transferir el derecho a la
+              terapia a otra persona de su elección, notificando previamente a
+              la clínica por escrito.
+            </li>
+            <li>
+              3. El paciente deberá utilizar la terapia dentro del plazo máximo
+              de cinco meses desde la fecha de pago, ya sea de manera personal o
+              mediante donación. Transcurrido este periodo, sin haber hecho uso
+              del servicio, se perderá el derecho a recibir la terapia sin
+              opción de compensación.
+            </li>
+          </ul>
+        </section>
+        <section class="mb-10">
+          <h3 class="mb-5 font-bold text-xl">IV. DERECHOS DEL PACIENTE</h3>
+          <p class="mb-5">
+            De acuerdo con la Ley N° 20.584, el paciente tiene derecho a:
+          </p>
+          <ul>
+            <li>
+              1. Recibir información clara y precisa sobre su diagnóstico,
+              tratamiento y pronóstico.<br />– La Clínica Integral Relevium
+              proporcionará esta información de manera verbal una vez que el
+              paciente haya contratado un tratamiento específico. Se explicarán
+              las características del tratamiento, sus beneficios, posibles
+              efectos adversos y alternativas disponibles, asegurando la
+              comprensión total por parte del paciente.
+            </li>
+            <li>
+              2. Acceder a su historial clínico y solicitar copia de su ficha
+              médica.<br />– El paciente podrá solicitar el acceso a su
+              historial clínico de manera presencial en la clínica o a través de
+              una solicitud formal por correo electrónico. La entrega de la
+              copia de la ficha médica se realizará dentro de un plazo máximo de
+              10 días hábiles, conforme a la normativa vigente.
+            </li>
+            <li>
+              3. Ser tratado con dignidad y respeto, asegurando la
+              confidencialidad de su información médica.
+            </li>
+            <li>
+              4. Otorgar o revocar su consentimiento de manera libre e informada
+              en cualquier momento.<br />– El paciente podrá solicitar la
+              revocación de su consentimiento enviando una solicitud escrita a
+              la Clínica Integral Relevium mediante correo electrónico o de
+              forma presencial en la recepción de la clínica. Sin embargo, la
+              revocación no afectará los procedimientos ya realizados ni las
+              obligaciones económicas asumidas hasta la fecha de la solicitud.
+            </li>
+            <li>
+              5. Presentar reclamos y sugerencias ante la clínica o la
+              Superintendencia de Salud, en caso de considerar vulnerados sus
+              derechos.
+            </li>
+          </ul>
+        </section>
+        <section class="mb-10">
+          <h3 class="mb-5 font-bold text-xl">
+            V. CONFIRMACIÓN Y ACEPTACIÓN DEL PACIENTE
+          </h3>
+          <p>
+            Una vez informado el paciente por cualquier medio (presencial,
+            verbal, telefónico, o por escrito), este declara haber leído y
+            comprendido la presente información contenida en este documento, y
+            manifiesta su consentimiento libre e informado para la recepción de
+            los servicios ofrecidos por Clínica Integral Relevium. Asimismo,
+            reconoce su responsabilidad de cumplir con las políticas de
+            asistencia, cancelación y pago establecidas.
+          </p>
+        </section>
+      </div>
+      <Contacto />
+    </div>
+  </Container>
+</Layout>

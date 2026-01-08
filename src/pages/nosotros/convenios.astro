@@ -1,1 +1,67 @@
-<h1>Convenios</h1>
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@layouts/Container.astro";
+import Cabecera from "@components/inicio/Cabecera.astro";
+import Contacto from "@components/inicio/Contacto.astro";
+
+interface Seo {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}
+
+const seo: Seo = {
+  title: "Convenios - Clinica Integral Relevium",
+  description:
+    "Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile. Trabajamos con un equipo multidisciplinario.",
+  url: "https://clinicarelevium.cl/nosotros/convenios",
+  image:
+    "https://clinicarelevium.cl/wp-content/uploads/2022/02/cropped-foto_01-scaled-1-416x120.jpg",
+};
+---
+
+<Layout dataPag={seo}>
+  <Cabecera
+    image="/images/convenios/convenio.webp"
+    title="Convenios"
+    texto="Atendemos con convenios de salud para tu tranquilidad."
+  />
+  <Container>
+    <div id="contenido" class="relative flex lg:flex-row flex-col items-center">
+      <img
+        src="/images/convenios/club-pro-providencia.webp"
+        alt="Club Providencia"
+        class="mx-2 w-64 h-64"
+      />
+      <img
+        src="/images/convenios/ministerio-transporte.webp"
+        alt="Ministerio de Transporte"
+        class="mx-2 w-64 h-64"
+      />
+      <img
+        src="/images/convenios/provid-salud.webp"
+        alt="Provid Salud"
+        class="mx-2 w-96 h-64"
+      />
+      <img
+        src="/images/convenios/vk-consultores.webp"
+        alt="VK Consultores"
+        class="mx-2 w-64 h-64"
+      />
+    </div>
+    <div class="flex lg:flex-row flex-col items-center mt-5">
+      <img
+        src="/images/convenios/aurora-odontologia.webp"
+        alt="Aurora Odontología"
+        class="mx-2 w-96 h-48"
+      />
+      <img
+        src="/images/convenios/centro-del-dolor.webp"
+        alt="Centro del dolor"
+        class="mx-2 w-96 h-64"
+      />
+    </div>
+  </Container>
+  <Contacto />
+</Layout>
