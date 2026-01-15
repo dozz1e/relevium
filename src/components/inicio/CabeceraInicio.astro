@@ -1,0 +1,78 @@
+---
+import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
+import BtnReserva from "@components/extras/BtnReserva.astro";
+---
+
+<div class="relative mb-20" id="carrusel">
+  <div id="overlay" class="top-0 right-0 bottom-0 left-0 z-10 absolute"></div>
+  <div
+    id="hero"
+    class="top-0 right-0 bottom-0 left-0 z-20 absolute flex justify-center items-center hero"
+  >
+    <div class="text-center hero-text">
+      <h1 class="mb-2 text-white text-5xl">BIENVENIDO A RELEVIUM</h1>
+      <p class="mb-4 text-gray-300 text-2xl">
+        Centro de Rehabilitación Maxilofacial
+      </p>
+
+      <div class="button">
+        <BtnReserva />
+      </div>
+    </div>
+  </div>
+  <Swiper
+    options={{
+      // check options at https://swiperjs.com/swiper-api
+      autoplay: {
+        disableOnInteraction: false,
+        waitForTransition: false,
+      },
+      loop: true,
+      effect: "fade",
+    }}
+  >
+    <SwiperWrapper>
+      <!-- Slides -->
+      <SwiperSlide>
+        <img src="/images/slider/1.webp" alt="Slider 1" class="w-full" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="/images/slider/2.webp" alt="Slider 2" class="w-full" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="/images/slider/3.webp" alt="Slider 3" class="w-full" />
+      </SwiperSlide>
+    </SwiperWrapper>
+  </Swiper>
+</div>
+
+<style>
+  .swiper {
+    height: 500px;
+  }
+
+  #carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without being skewed */
+    animation: zoom-in-out 10s ease infinite; /* Apply the animation */
+  }
+
+  #overlay {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  @keyframes zoom-in-out {
+    0% {
+      transform: scale(1); /* Original size at the start */
+    }
+    50% {
+      transform: scale(1.3); /* Zooms in to 130% at the midpoint */
+    }
+    100% {
+      transform: scale(
+        1
+      ); /* Returns to original size at the end, creating a loop */
+    }
+  }
+</style>

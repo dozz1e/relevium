@@ -1,7 +1,7 @@
 const docs = [
   {
     id: "id1",
-    image: "https://avatar.iran.liara.run/public",
+    image: "https://randomuser.me/api/portraits/women/81.jpg",
     name: "Paula Almarza Rodriguez",
     profesion: "Kinesióloga",
     data: [
@@ -15,7 +15,7 @@ const docs = [
   },
   {
     id: "id2",
-    image: "https://avatar.iran.liara.run/public",
+    image: "https://randomuser.me/api/portraits/men/10.jpg",
     name: "Héctor Meneses León",
     profesion: "Kinesiólogo",
     data: [
@@ -31,7 +31,7 @@ const docs = [
   },
   {
     id: "id3",
-    image: "https://avatar.iran.liara.run/public",
+    image: "https://randomuser.me/api/portraits/women/40.jpg",
     name: "Silvana Laissle Casas del Valle",
     profesion: "Kinesióloga",
     data: [
@@ -48,7 +48,7 @@ const docs = [
   },
   {
     id: "id4",
-    image: "https://avatar.iran.liara.run/public",
+    image: "https://randomuser.me/api/portraits/women/29.jpg",
     name: "Imay Acuña Salinas",
     profesion: "Fonoaudióloga",
     data: [
@@ -60,9 +60,9 @@ const docs = [
   },
   {
     id: "id5",
-    image: "https://avatar.iran.liara.run/public",
+    image: "https://randomuser.me/api/portraits/men/61.jpg",
     name: "⁠Felipe Field Seisdedos",
-    profesion: "KinesiolKinesiólogoogo",
+    profesion: "Kinesiologo",
     data: [
       "Kinesiólogo titulado Universidad Mayor.",
       "Diplomado en fundamentos de la kinesiología maxilofacial U. de los Andes.",
@@ -73,9 +73,9 @@ const docs = [
   },
   {
     id: "id6",
-    image: "https://avatar.iran.liara.run/public",
+    image: "https://randomuser.me/api/portraits/women/83.jpg",
     name: "Katherine Villalobos",
-    profesion: "Kinesiólogo",
+    profesion: "Kinesióloga",
     data: [
       "Kinesiólogo titulado Universidad del Mar.",
       "Kinesióloga con experiencia en posturología, terapeuta en vendaje neuromuscular, masoterapia, estética corporal y facial.",
@@ -84,7 +84,7 @@ const docs = [
   },
   {
     id: "id7",
-    image: "https://avatar.iran.liara.run/public",
+    image: "https://randomuser.me/api/portraits/men/76.jpg",
     name: "Luis Felipe Landeros Poblete",
     profesion: "Kinesiólogo",
     data: [
@@ -96,7 +96,7 @@ const docs = [
   },
   {
     id: "id8",
-    image: "https://avatar.iran.liara.run/public",
+    image: "https://randomuser.me/api/portraits/women/63.jpg",
     name: "Paola Herrera Mancilla",
     profesion: "Kinesióloga",
     data: [

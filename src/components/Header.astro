@@ -1,4 +1,8 @@
-<nav class="top-0 z-20 absolute w-full start-0">
+---
+import BtnReserva from "@components/extras/BtnReserva.astro";
+---
+
+<nav class="w-full">
   <div
     class="flex flex-wrap justify-between items-center mx-auto p-4 max-w-7xl"
   >
@@ -34,12 +38,12 @@
       id="navbar-multi-level-dropdown"
     >
       <ul
-        class="flex md:flex-row flex-col rtl:space-x-reverse md:space-x-8 mt-4 md:mt-0 p-4 md:p-0 rounded-base font-medium"
+        class="flex md:flex-row flex-col items-center rtl:space-x-reverse md:space-x-8 mt-4 md:mt-0 p-4 md:p-0 rounded-base font-medium"
       >
         <li>
           <a
             href="/"
-            class="block bg-sky-600 md:bg-transparent md:p-0 px-3 py-2 rounded text-white md:text-fg-brand"
+            class="block md:p-0 px-3 py-2 rounded text-heading hover:text-sky-600"
             aria-current="page">INICIO</a
           >
         </li>
@@ -47,7 +51,8 @@
           <button
             id="multiLevelDropdownButton"
             data-dropdown-toggle="multi-dropdown"
-            class="flex justify-between items-center md:hover:bg-transparent hover:bg-neutral-tertiary md:p-0 px-3 py-2 md:border-0 rounded w-full md:w-auto font-medium text-heading md:hover:text-fg-brand"
+            data-dropdown-trigger="hover"
+            class="flex justify-between items-center md:hover:bg-transparent hover:bg-neutral-tertiary md:p-0 px-3 py-2 md:border-0 rounded w-full md:w-auto font-medium text-heading md:hover:text-sky-600"
           >
             SERVICIOS
             <svg
@@ -69,7 +74,7 @@
           <!-- Dropdown menu -->
           <div
             id="multi-dropdown"
-            class="hidden z-10 bg-neutral-primary-medium shadow-lg border border-default-medium rounded-base w-44"
+            class="hidden z-100 bg-neutral-primary-medium shadow-lg border border-default-medium rounded-base w-44"
           >
             <ul
               class="p-2 font-medium text-body text-sm"
@@ -87,6 +92,7 @@
                   id="doubleDropdownButton"
                   data-dropdown-toggle="doubleDropdown"
                   data-dropdown-placement="right-start"
+                  data-dropdown-trigger="hover"
                   type="button"
                   class="inline-flex items-center hover:bg-neutral-tertiary-medium p-2 rounded w-full hover:text-heading text-left"
                 >
@@ -188,7 +194,8 @@
           <button
             id="multiLevelDropdownButton"
             data-dropdown-toggle="multi-dropdown2"
-            class="flex justify-between items-center md:hover:bg-transparent hover:bg-neutral-tertiary md:p-0 px-3 py-2 md:border-0 rounded w-full md:w-auto font-medium text-heading md:hover:text-fg-brand"
+            data-dropdown-trigger="hover"
+            class="flex justify-between items-center md:hover:bg-transparent hover:bg-neutral-tertiary md:p-0 px-3 py-2 md:border-0 rounded w-full md:w-auto font-medium text-heading md:hover:text-sky-600"
           >
             NOSOTROS
             <svg
@@ -210,7 +217,7 @@
           <!-- Dropdown menu -->
           <div
             id="multi-dropdown2"
-            class="hidden z-10 bg-neutral-primary-medium shadow-lg border border-default-medium rounded-base w-44"
+            class="hidden z-100 bg-neutral-primary-medium shadow-lg border border-default-medium rounded-base w-44"
           >
             <ul
               class="p-2 font-medium text-body text-sm"
@@ -255,11 +262,7 @@
           </div>
         </li>
         <li>
-          <a
-            href="https://0f9645a0110ca7a37c233d5052b50d73f95e5b7c.agenda.softwaredentalink.com/agenda?modalidad=1"
-            class="bg-sky-600 px-4 py-2.5 rounded-base focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-white text-sm text-center leading-5"
-            >RESERVA DE HORAS</a
-          >
+          <BtnReserva />
         </li>
       </ul>
     </div>
@@ -559,10 +562,6 @@
         </li>
       </ul>
     </div>
-    <button
-      type="button"
-      class="bg-linear-to-r hover:bg-linear-to-bl from-cyan-500 to-blue-500 py-5 rounded-base focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800 w-full font-medium text-white text-lg text-center leading-5"
-      >Reserva de Horas</button
-    >
+    <BtnReserva />
   </nav>
 </div>

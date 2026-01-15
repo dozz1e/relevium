@@ -1,0 +1,17 @@
+---
+import Calendario from "@components/iconos/Calendario.astro";
+
+const {
+  url = "https://0f9645a0110ca7a37c233d5052b50d73f95e5b7c.agenda.softwaremedilink.com/agenda?modalidad=1",
+  texto = "RESERVA TU HORA",
+} = Astro.props;
+---
+
+<a
+  href={url}
+  target="_blank"
+  class="inline-flex box-border items-center bg-sky-600 hover:bg-sky-700 px-5 py-3.5 border border-transparent focus:outline-none focus:ring-[#3b5998]/50 focus:ring-4 dark:focus:ring-[#3b5998]/55 font-medium text-white text-sm text-center leading-5"
+>
+  <Calendario />
+  {texto}
+</a>

@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Container from "@layouts/Container.astro";
-import Cabecera from "@components/inicio/Cabecera.astro";
+import CabeceraInicio from "@components/inicio/CabeceraInicio.astro";
 import Datos from "@components/inicio/Datos.astro";
 import Nosotros from "@components/inicio/Nosotros.astro";
 import Docs from "@components/inicio/Docs.astro";
@@ -25,11 +25,7 @@ const seo: Seo = {
 ---
 
 <Layout dataPag={seo}>
-  <Cabecera
-    image="/images/doctor.webp"
-    title="BIENVENIDO A NUESTRA CLÍNICA"
-    texto="Clínica Integral Relevium es el único Centro de Rehabilitación Maxilofacial que existe en Chile."
-  />
+  <CabeceraInicio />
   <Container>
     <div id="contenido" class="relative">
       <Datos />

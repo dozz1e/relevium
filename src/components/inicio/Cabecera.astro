@@ -1,4 +1,6 @@
 ---
+import BtnReserva from "@components/extras/BtnReserva.astro";
+
 const {
   image,
   title,
@@ -12,14 +14,14 @@ const {
   <div class="mt-20 container">
     <!-- Text -->
     <div class="hero-text">
-      <span class="text-sky-600 eyebrow">BIENVENIDO A NUESTRA CLÍNICA</span>
+      <span class="text-sky-600 eyebrow">BIENVENIDO A RELEVIUM</span>
       <h1>{title}</h1>
       <p>
         {texto}
       </p>
 
       <div class="buttons">
-        <a href={url} target="_blank" class="bg-sky-600 btn primary">{boton}</a>
+        <BtnReserva url={url} texto={boton} />
       </div>
     </div>
 
